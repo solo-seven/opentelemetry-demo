@@ -15,9 +15,9 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.16.0
 	go.opentelemetry.io/otel/sdk/metric v0.39.0
 	go.opentelemetry.io/otel/trace v1.16.0
-	google.golang.org/grpc v1.56.0
+	google.golang.org/grpc v1.57.0
 	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.3.0
-	google.golang.org/protobuf v1.30.0
+	google.golang.org/protobuf v1.31.0
 )
 
 require (
@@ -46,8 +46,8 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric v0.39.0 // indirect
 	go.opentelemetry.io/otel/metric v1.16.0 // indirect
 	go.opentelemetry.io/proto/otlp v0.20.0 // indirect
-	golang.org/x/crypto v0.10.0 // indirect
-	golang.org/x/net v0.11.0 // indirect
+	golang.org/x/crypto v0.12.0 // indirect
+	golang.org/x/net v0.14.0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20230530153820-e85fd2cbaebc // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230530153820-e85fd2cbaebc // indirect
 )
@@ -56,9 +56,17 @@ require (
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.42.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.16.0 // indirect
 	go.opentelemetry.io/otel/sdk v1.16.0
-	golang.org/x/sys v0.9.0 // indirect
-	golang.org/x/text v0.10.0 // indirect
+	golang.org/x/sys v0.11.0 // indirect
+	golang.org/x/text v0.12.0 // indirect
 	google.golang.org/genproto v0.0.0-20230530153820-e85fd2cbaebc // indirect
 )
 
 replace github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice => ../productcatalogservice
+
+replace go.opentelemetry.io/otel => github.com/grafana/opentelemetry-go v0.0.0-20230821210413-dd55cfa34d33
+
+replace go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc => github.com/grafana/opentelemetry-go-contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.0.0-20230821182833-0f38bae48274
+
+replace go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp => github.com/grafana/opentelemetry-go-contrib/instrumentation/net/http/otelhttp v0.0.0-20230821182833-0f38bae48274
+
+replace go.opentelemetry.io/contrib/instrumentation/runtime => github.com/grafana/opentelemetry-go-contrib/instrumentation/runtime v0.0.0-20230821182833-0f38bae48274
