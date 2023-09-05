@@ -53,3 +53,4 @@ src/shippingservice/target/
 
 .env.grafana
 .env.grafana.*
+.envrc
