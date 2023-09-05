@@ -124,3 +124,10 @@ stop:
 	docker compose down --remove-orphans --volumes
 	@echo ""
 	@echo "OpenTelemetry Demo is stopped."
+
+.PHONY: start-kube
+start-kube:
+	kind create cluster --config opentelemetry-kind-cluster.yaml
+	kubectl create namespace otel-demo
+	kubectl config set-context --current --namespace otel-demo
+	kubectl apply -f kubernetes/opentelemetry-demo.yaml
